@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Premium Gradient Background Elements -->
+    <View
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="-200dp"
+        android:layout_marginEnd="-150dp"
+        android:alpha="0.12"
+        android:background="@drawable/circle_accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="200dp"
+        android:alpha="0.08"
+        android:background="@drawable/circle_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="24dp"
+            android:baselineAligned="false">
+
+            <!-- Premium Header -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvWelcomeUser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_user"
+                    android:textColor="@color/text_white"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/headerActions"
+                    tools:text="👋 Hello, Usman" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_ready_to_learn"
+                    android:textColor="@color/text_gray"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvWelcomeUser" />
+
+                <LinearLayout
+                    android:id="@+id/headerActions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnChangeLanguage"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/english"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        app:icon="@android:drawable/ic_menu_sort_by_size"
+                        app:iconTint="@color/primary" />
+
+                    <ImageView
+                        android:id="@+id/ivNotification"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:padding="10dp"
+                        android:src="@android:drawable/ic_popup_reminder"
+                        android:background="@drawable/glass_background"
+                        android:contentDescription="@string/notifications"
+                        app:tint="@color/text_white" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Streak & XP Quick Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="#1AFFFFFF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:id="@+id/tvHomeStreak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="@string/day_streak_format"
+                        android:textColor="@color/accent"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-medium"
+                        tools:text="🔥 7 Day Streak" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardBackgroundColor="#1AFFFFFF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:id="@+id/tvHomePoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="@string/xp_points_format"
+                        android:textColor="@color/secondary"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-medium"
+                        tools:text="⭐ 1250 XP" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Section: Learning Focus -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/continue_learning"
+                android:textColor="@color/text_white"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-black" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/card_bg"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="8dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#1AFFFFFF">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:id="@+id/tvCurrentCourse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spanish: Level 1"
+                        android:textColor="@color/text_white"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvProgressPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/percent_format"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="0%" />
+
+                    <ProgressBar
+                        android:id="@+id/courseProgress"
+                        style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="16dp"
+                        android:progress="0"
+                        android:progressTint="@color/primary"
+                        android:progressBackgroundTint="#33FFFFFF"
+                        app:layout_constraintTop_toBottomOf="@id/tvCurrentCourse" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnContinueLesson"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/continue_lesson"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="16dp"
+                        android:backgroundTint="@color/primary"
+                        app:layout_constraintTop_toBottomOf="@id/courseProgress" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Categories Grid -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/categories"
+                android:textColor="@color/text_white"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-black" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCatVocab"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:text="@string/vocabulary"
+                    android:textColor="@color/text_white"
+                    app:icon="@drawable/ic_book"
+                    app:iconTint="@color/primary"
+                    app:strokeColor="@color/primary"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCatSpeaking"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:text="@string/speaking"
+                    android:textColor="@color/text_white"
+                    app:icon="@drawable/ic_mic"
+                    app:iconTint="@color/accent"
+                    app:strokeColor="@color/accent"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCatGrammar"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:text="@string/grammar"
+                    android:textColor="@color/text_white"
+                    app:icon="@android:drawable/ic_menu_edit"
+                    app:iconTint="@color/secondary"
+                    app:strokeColor="@color/secondary"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCatQuiz"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:text="@string/quiz"
+                    android:textColor="@color/text_white"
+                    app:icon="@android:drawable/ic_menu_help"
+                    app:iconTint="@color/primary"
+                    app:strokeColor="@color/primary"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCatListening"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:text="@string/listening"
+                    android:textColor="@color/text_white"
+                    app:icon="@drawable/ic_headset"
+                    app:iconTint="@color/accent"
+                    app:strokeColor="@color/accent"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCatChat"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:text="@string/ai_chat"
+                    android:textColor="@color/text_white"
+                    app:icon="@drawable/ic_chat_ai"
+                    app:iconTint="@color/secondary"
+                    app:strokeColor="@color/secondary"
+                    app:cornerRadius="16dp" />
+            </GridLayout>
+
+            <!-- Popular Courses Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/popular_courses"
+                android:textColor="@color/text_white"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPopularCourses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="4dp"
+                tools:listitem="@layout/item_course" />
+
+            <!-- Daily Lessons -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/daily_lessons"
+                android:textColor="@color/text_white"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewDaily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_word" />
+
+            <!-- Weekly Progress Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/weekly_progress"
+                android:textColor="@color/text_white"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/glass_background"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weekly_xp_activity"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chart_placeholder"
+                    android:textColor="@color/primary"
+                    android:alpha="0.4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

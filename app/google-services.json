@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "561811741326",
+    "firebase_url": "https://globatalk09-default-rtdb.firebaseio.com",
+    "project_id": "globatalk09",
+    "storage_bucket": "globatalk09.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561811741326:android:02374719d76e41e4a707df",
+        "android_client_info": {
+          "package_name": "com.company.GlobeTalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561811741326-udmob5pd049pq27omvd293uu768idfaf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.GlobeTalk",
+            "certificate_hash": "030fc657a88f70c145e09ed05a07515bfe978f4f"
+          }
+        },
+        {
+          "client_id": "561811741326-f1iagapd8e7k5pcots6epp2468cr42du.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDufL36nbHsUq-AC8GXvJv6gixUW7ypmNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561811741326-f1iagapd8e7k5pcots6epp2468cr42du.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
