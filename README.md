@@ -39,23 +39,30 @@ GlobaTalk is a professional, high-end language learning application designed to 
 ## 📸 Screenshots
 
 <table>
- <tr>
+  <tr>
     <td align="center"><b>Splash</b></td>
-    <td align="center"><b>Welcome</b></td>
     <td align="center"><b>Sign in</b></td>
     <td align="center"><b>Sign up</b></td>
     <td align="center"><b>Home</b></td>
- </tr>
- <tr>
-<img width="200"  alt="translator" src="https://github.com/user-attachments/assets/59e36962-30eb-467f-87ec-ee08d8b2405d" />
-<img width="200"  alt="splash" src="https://github.com/user-attachments/assets/3f19e50f-49a4-42a4-aa0f-a8c53272f16e" />
-<img width="200"  alt="signup" src="https://github.com/user-attachments/assets/2558e2a7-fa5e-4f9b-972f-78fa40175e7c" />
-<img width="200"  alt="progress" src="https://github.com/user-attachments/assets/05fde4b1-3ef9-4582-b020-e1c0aad0fefe" />
-<img width="200"  alt="profile" src="https://github.com/user-attachments/assets/568b2bb3-33c0-40d9-bf07-f0c6d4eb2fca" />
-<img width="200"  alt="login" src="https://github.com/user-attachments/assets/05212c06-7079-4528-a053-e2569ade11fc" />
-<img width="200"  alt="home" src="https://github.com/user-attachments/assets/7c639b30-34eb-4c4f-9181-66c363327dd1" />
-<img width="200"  alt="ai tutor" src="https://github.com/user-attachments/assets/dab5ad51-69e8-443a-8025-1e188f4583a0" />
- </tr>   
+  </tr>
+  <tr>
+    <td><img src="splash.png" width="200"/></td>
+    <td><img src="login.png" width="200"/></td>
+    <td><img src="signup.png" width="200"/></td>
+    <td><img src="home.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Translator</b></td>
+    <td align="center"><b>Ai Tutor</b></td>  
+    <td align="center"><b>Progress</b></td>
+    <td align="center"><b>Profile</b></td>  
+  </tr>
+  <tr>
+    <td><img src="translator.png" width="200"/></td>
+    <td><img src="ai tutor.png" width="200"/></td>
+    <td><img src="progress.png" width="200"/></td>
+    <td><img src="profile.png" width="200"/></td>
+  </tr>
 </table>
 
 ## 📄 License
@@ -64,11 +71,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 Created with ❤️ by **Rusman Ali** and the GlobaTalk Team
-<img width="720" height="1600" alt="translator" src="https://github.com/user-attachments/assets/59e36962-30eb-467f-87ec-ee08d8b2405d" />
-<img width="720" height="1600" alt="splash" src="https://github.com/user-attachments/assets/3f19e50f-49a4-42a4-aa0f-a8c53272f16e" />
-<img width="720" height="1600" alt="signup" src="https://github.com/user-attachments/assets/2558e2a7-fa5e-4f9b-972f-78fa40175e7c" />
-<img width="720" height="1600" alt="progress" src="https://github.com/user-attachments/assets/05fde4b1-3ef9-4582-b020-e1c0aad0fefe" />
-<img width="720" height="1600" alt="profile" src="https://github.com/user-attachments/assets/568b2bb3-33c0-40d9-bf07-f0c6d4eb2fca" />
-<img width="720" height="1600" alt="login" src="https://github.com/user-attachments/assets/05212c06-7079-4528-a053-e2569ade11fc" />
-<img width="720" height="1600" alt="home" src="https://github.com/user-attachments/assets/7c639b30-34eb-4c4f-9181-66c363327dd1" />
-<img width="720" height="1600" alt="ai tutor" src="https://github.com/user-attachments/assets/dab5ad51-69e8-443a-8025-1e188f4583a0" />
+
