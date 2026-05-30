@@ -38,7 +38,15 @@ GlobaTalk is a professional, high-end language learning application designed to 
 
 ## 📸 Screenshots
 
-<p align="center">
+<table>
+ <tr>
+    <td align="center"><b>Splash</b></td>
+    <td align="center"><b>Welcome</b></td>
+    <td align="center"><b>Sign in</b></td>
+    <td align="center"><b>Sign up</b></td>
+    <td align="center"><b>Home</b></td>
+ </tr>
+ <tr>
 <img width="200"  alt="translator" src="https://github.com/user-attachments/assets/59e36962-30eb-467f-87ec-ee08d8b2405d" />
 <img width="200"  alt="splash" src="https://github.com/user-attachments/assets/3f19e50f-49a4-42a4-aa0f-a8c53272f16e" />
 <img width="200"  alt="signup" src="https://github.com/user-attachments/assets/2558e2a7-fa5e-4f9b-972f-78fa40175e7c" />
@@ -47,7 +55,8 @@ GlobaTalk is a professional, high-end language learning application designed to 
 <img width="200"  alt="login" src="https://github.com/user-attachments/assets/05212c06-7079-4528-a053-e2569ade11fc" />
 <img width="200"  alt="home" src="https://github.com/user-attachments/assets/7c639b30-34eb-4c4f-9181-66c363327dd1" />
 <img width="200"  alt="ai tutor" src="https://github.com/user-attachments/assets/dab5ad51-69e8-443a-8025-1e188f4583a0" />
-</p>
+ </tr>   
+</table>
 
 ## 📄 License
 
