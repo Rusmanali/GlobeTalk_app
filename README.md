@@ -27,7 +27,7 @@ GlobaTalk is a professional, high-end language learning application designed to 
 
 1.  **Clone the repo**:
     ```bash
-    git clone https://github.com/[YOUR_USERNAME]/GlobeTalk_app.git
+    git clone https://github.com/Rusmanali/GlobeTalk_app.git
     ```
 2.  **Add your configuration**:
     *   Place your `google-services.json` in the `app/` directory.
@@ -38,11 +38,22 @@ GlobaTalk is a professional, high-end language learning application designed to 
 
 ## 📸 Screenshots
 
-*(Add your professional screenshots here)*
+<p align="center">
+  <img src="screenshots/splash.png" width="200" alt="Splash Screen">
+  <img src="screenshots/login.png" width="200" alt="Login">
+  <img src="screenshots/home.png" width="200" alt="Home Screen">
+  <img src="screenshots/ai tutor.png" width="200" alt="AI Tutor">
+</p>
+<p align="center">
+  <img src="screenshots/translator.png" width="200" alt="Translator">
+  <img src="screenshots/progress.png" width="200" alt="Progress">
+  <img src="screenshots/profile.png" width="200" alt="Profile">
+  <img src="screenshots/signup.png" width="200" alt="Sign Up">
+</p>
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-Created with ❤️ by the GlobaTalk Team
+Created with ❤️ by **Rusman Ali** and the GlobaTalk Team
