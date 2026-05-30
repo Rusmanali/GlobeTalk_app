@@ -12,7 +12,7 @@
     <string name="dont_have_account">Don\'t have an account? Sign up</string>
     <string name="app_logo_desc">App Logo</string>
     <string name="notifications">Notifications</string>
-    <string name="welcome_user">👋 Hello, %s</string>
+    <string name="welcome_user">Hi! %s</string>
     <string name="home_ready_to_learn">Ready to learn today?</string>
     <string name="home_subtitle">Let\'s learn something new today</string>
     <string name="day_streak_format">🔥 %d Day Streak</string>

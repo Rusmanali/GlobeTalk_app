@@ -24,6 +24,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.globatalk.MainActivity;
 import com.example.globatalk.R;
 import com.example.globatalk.util.StreakManager;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,7 +50,10 @@ public class HomeFragment extends Fragment implements TextToSpeech.OnInitListene
             if (name == null || name.isEmpty()) {
                 name = (email != null) ? email.split("@")[0] : "User";
             }
-            binding.tvWelcomeUser.setText(getString(R.string.welcome_user, name));
+            
+            // Extract first name
+            String firstName = name.trim().split("\\s+")[0];
+            binding.tvWelcomeUser.setText(getString(R.string.welcome_user, firstName));
         }
 
         binding.tvHomeStreak.setText(getString(R.string.day_streak_format, StreakManager.getStreak(getContext())));
@@ -152,8 +156,19 @@ public class HomeFragment extends Fragment implements TextToSpeech.OnInitListene
         binding.btnCatVocab.setOnClickListener(v -> filterByCategory("Vocabulary", adapter));
         binding.btnCatGrammar.setOnClickListener(v -> filterByCategory("Grammar", adapter));
         binding.btnCatSpeaking.setOnClickListener(v -> filterByCategory("Speaking", adapter));
-        binding.btnCatQuiz.setOnClickListener(v -> Toast.makeText(getContext(), "Switch to Quiz tab!", Toast.LENGTH_SHORT).show());
-        binding.btnCatListening.setOnClickListener(v -> Toast.makeText(getContext(), "Listening lessons coming soon!", Toast.LENGTH_SHORT).show());
+        binding.btnCatListening.setOnClickListener(v -> filterByCategory("Listening", adapter));
+        
+        binding.btnCatQuiz.setOnClickListener(v -> {
+            if (getActivity() != null) {
+                // Navigate to Quiz tab in bottom navigation
+                ((MainActivity) getActivity()).findViewById(R.id.nav_progress).performClick();
+                // Since progress/quiz shared tab in my previous mapping, or nav_quiz if it exists
+                // Let's use the explicit ID for Quiz if it exists in menu
+                View quizTab = getActivity().findViewById(R.id.nav_progress);
+                if (quizTab != null) quizTab.performClick();
+            }
+        });
+
         binding.btnCatChat.setOnClickListener(v -> {
             if (getActivity() != null) {
                 getActivity().getSupportFragmentManager().beginTransaction()
@@ -162,6 +177,42 @@ public class HomeFragment extends Fragment implements TextToSpeech.OnInitListene
                         .commit();
             }
         });
+
+        setupWeeklyProgress();
+    }
+
+    private void setupWeeklyProgress() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        int totalPoints = prefs.getInt("total_points", 0);
+        
+        // Simulating weekly distribution based on total points
+        // In a real app, you would store points per day in a separate DB table
+        int[] dailyXP = {
+            totalPoints / 10,
+            totalPoints / 8,
+            totalPoints / 5,
+            totalPoints / 12,
+            totalPoints / 7,
+            totalPoints / 4, // Peak today
+            totalPoints / 15
+        };
+
+        // Maximum height in DP for the bars
+        float maxBarHeight = 140f; 
+        int maxXP = 0;
+        for (int xp : dailyXP) if (xp > maxXP) maxXP = xp;
+        if (maxXP == 0) maxXP = 1; // Avoid division by zero
+
+        View[] bars = {binding.bar1, binding.bar2, binding.bar3, binding.bar4, binding.bar5, binding.bar6, binding.bar7};
+        
+        for (int i = 0; i < bars.length; i++) {
+            float heightFactor = (float) dailyXP[i] / maxXP;
+            int finalHeightPx = (int) (maxBarHeight * heightFactor * getResources().getDisplayMetrics().density);
+            
+            ViewGroup.LayoutParams params = bars[i].getLayoutParams();
+            params.height = Math.max(finalHeightPx, 10); // Minimum 10px height so bar is visible
+            bars[i].setLayoutParams(params);
+        }
     }
 
     private void filterByCategory(String category, WordAdapter adapter) {

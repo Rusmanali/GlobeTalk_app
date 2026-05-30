@@ -8,11 +8,11 @@
 
     <!-- Premium Gradient Background Elements -->
     <View
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="-200dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="500dp"
         android:layout_marginEnd="-150dp"
-        android:alpha="0.12"
+        android:alpha="0.08"
         android:background="@drawable/circle_accent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,7 +60,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/headerActions"
-                    tools:text="👋 Hello, Usman" />
+                    tools:text="Hi! Usman" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -90,26 +90,119 @@
                         android:textColor="@color/primary"
                         android:textStyle="bold"
                         android:padding="8dp"
-                        app:icon="@android:drawable/ic_menu_sort_by_size"
+                        app:icon="@drawable/language"
                         app:iconTint="@color/primary" />
 
-                    <ImageView
-                        android:id="@+id/ivNotification"
-                        android:layout_width="44dp"
-                        android:layout_height="44dp"
-                        android:layout_marginStart="8dp"
-                        android:padding="10dp"
-                        android:src="@android:drawable/ic_popup_reminder"
-                        android:background="@drawable/glass_background"
-                        android:contentDescription="@string/notifications"
-                        app:tint="@color/text_white" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Categories Horizontal Slide -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/categories"
+                android:textColor="@color/text_white"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-black" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCatVocab"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="@string/vocabulary"
+                        android:textColor="@color/text_white"
+                        app:icon="@drawable/ic_book"
+                        app:iconTint="@color/primary"
+                        app:strokeColor="@color/primary"
+                        app:cornerRadius="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCatSpeaking"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="@string/speaking"
+                        android:textColor="@color/text_white"
+                        app:icon="@drawable/ic_mic"
+                        app:iconTint="@color/accent"
+                        app:strokeColor="@color/accent"
+                        app:cornerRadius="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCatGrammar"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="@string/grammar"
+                        android:textColor="@color/text_white"
+                        app:icon="@android:drawable/ic_menu_edit"
+                        app:iconTint="@color/secondary"
+                        app:strokeColor="@color/secondary"
+                        app:cornerRadius="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCatQuiz"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="@string/quiz"
+                        android:textColor="@color/text_white"
+                        app:icon="@android:drawable/ic_menu_help"
+                        app:iconTint="@color/primary"
+                        app:strokeColor="@color/primary"
+                        app:cornerRadius="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCatListening"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="@string/listening"
+                        android:textColor="@color/text_white"
+                        app:icon="@drawable/ic_headset"
+                        app:iconTint="@color/accent"
+                        app:strokeColor="@color/accent"
+                        app:cornerRadius="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCatChat"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="@string/ai_chat"
+                        android:textColor="@color/text_white"
+                        app:icon="@drawable/ic_chat_ai"
+                        app:iconTint="@color/secondary"
+                        app:strokeColor="@color/secondary"
+                        app:cornerRadius="16dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
 
             <!-- Streak & XP Quick Info -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:orientation="horizontal"
                 android:baselineAligned="false">
 
@@ -231,102 +324,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Categories Grid -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="@string/categories"
-                android:textColor="@color/text_white"
-                android:textSize="22sp"
-                android:fontFamily="sans-serif-black" />
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:columnCount="2"
-                android:useDefaultMargins="true">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCatVocab"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="0dp"
-                    android:layout_height="64dp"
-                    android:layout_columnWeight="1"
-                    android:text="@string/vocabulary"
-                    android:textColor="@color/text_white"
-                    app:icon="@drawable/ic_book"
-                    app:iconTint="@color/primary"
-                    app:strokeColor="@color/primary"
-                    app:cornerRadius="16dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCatSpeaking"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="0dp"
-                    android:layout_height="64dp"
-                    android:layout_columnWeight="1"
-                    android:text="@string/speaking"
-                    android:textColor="@color/text_white"
-                    app:icon="@drawable/ic_mic"
-                    app:iconTint="@color/accent"
-                    app:strokeColor="@color/accent"
-                    app:cornerRadius="16dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCatGrammar"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="0dp"
-                    android:layout_height="64dp"
-                    android:layout_columnWeight="1"
-                    android:text="@string/grammar"
-                    android:textColor="@color/text_white"
-                    app:icon="@android:drawable/ic_menu_edit"
-                    app:iconTint="@color/secondary"
-                    app:strokeColor="@color/secondary"
-                    app:cornerRadius="16dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCatQuiz"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="0dp"
-                    android:layout_height="64dp"
-                    android:layout_columnWeight="1"
-                    android:text="@string/quiz"
-                    android:textColor="@color/text_white"
-                    app:icon="@android:drawable/ic_menu_help"
-                    app:iconTint="@color/primary"
-                    app:strokeColor="@color/primary"
-                    app:cornerRadius="16dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCatListening"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="0dp"
-                    android:layout_height="64dp"
-                    android:layout_columnWeight="1"
-                    android:text="@string/listening"
-                    android:textColor="@color/text_white"
-                    app:icon="@drawable/ic_headset"
-                    app:iconTint="@color/accent"
-                    app:strokeColor="@color/accent"
-                    app:cornerRadius="16dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnCatChat"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="0dp"
-                    android:layout_height="64dp"
-                    android:layout_columnWeight="1"
-                    android:text="@string/ai_chat"
-                    android:textColor="@color/text_white"
-                    app:icon="@drawable/ic_chat_ai"
-                    app:iconTint="@color/secondary"
-                    app:strokeColor="@color/secondary"
-                    app:cornerRadius="16dp" />
-            </GridLayout>
-
             <!-- Popular Courses Section -->
             <TextView
                 android:layout_width="wrap_content"
@@ -384,6 +381,7 @@
                 android:padding="24dp">
 
                 <TextView
+                    android:id="@+id/tvWeeklyTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/weekly_xp_activity"
@@ -392,16 +390,26 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/chart_placeholder"
-                    android:textColor="@color/primary"
-                    android:alpha="0.4"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                <LinearLayout
+                    android:id="@+id/chartContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="bottom"
+                    android:weightSum="7"
+                    app:layout_constraintTop_toBottomOf="@id/tvWeeklyTitle"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <View android:id="@+id/bar1" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:layout_marginHorizontal="4dp" android:background="@color/primary" android:alpha="0.4" />
+                    <View android:id="@+id/bar2" android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:layout_marginHorizontal="4dp" android:background="@color/primary" android:alpha="0.6" />
+                    <View android:id="@+id/bar3" android:layout_width="0dp" android:layout_height="120dp" android:layout_weight="1" android:layout_marginHorizontal="4dp" android:background="@color/primary" />
+                    <View android:id="@+id/bar4" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:layout_marginHorizontal="4dp" android:background="@color/primary" android:alpha="0.5" />
+                    <View android:id="@+id/bar5" android:layout_width="0dp" android:layout_height="90dp" android:layout_weight="1" android:layout_marginHorizontal="4dp" android:background="@color/primary" android:alpha="0.7" />
+                    <View android:id="@+id/bar6" android:layout_width="0dp" android:layout_height="150dp" android:layout_weight="1" android:layout_marginHorizontal="4dp" android:background="@color/accent" />
+                    <View android:id="@+id/bar7" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="1" android:layout_marginHorizontal="4dp" android:background="@color/primary" android:alpha="0.3" />
+                </LinearLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

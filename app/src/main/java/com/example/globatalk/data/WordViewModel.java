@@ -49,26 +49,31 @@ public class WordViewModel extends AndroidViewModel {
             wordDao.insertWord(new Word("Hello", "Hello", "Vocabulary", "English"));
             wordDao.insertWord(new Word("How are you?", "How are you?", "Speaking", "English"));
             wordDao.insertWord(new Word("I am learning.", "I am learning.", "Grammar", "English"));
+            wordDao.insertWord(new Word("Can you hear me?", "Can you hear me?", "Listening", "English"));
             
+            // Spanish
+            wordDao.insertWord(new Word("Hola", "Hello", "Vocabulary", "Spanish"));
+            wordDao.insertWord(new Word("¿Cómo estás?", "How are you?", "Speaking", "Spanish"));
+            wordDao.insertWord(new Word("Estoy aprendiendo.", "I am learning.", "Grammar", "Spanish"));
+            wordDao.insertWord(new Word("¿Me escuchas?", "Can you hear me?", "Listening", "Spanish"));
+
             // Urdu
             wordDao.insertWord(new Word("ہیلو", "Hello", "Vocabulary", "Urdu"));
             wordDao.insertWord(new Word("آپ کیسے ہیں؟", "How are you?", "Speaking", "Urdu"));
             wordDao.insertWord(new Word("میں سیکھ رہا ہوں۔", "I am learning.", "Grammar", "Urdu"));
-
-            // Arabic
-            wordDao.insertWord(new Word("مرحباً", "Hello", "Vocabulary", "Arabic"));
-            wordDao.insertWord(new Word("كيف حالك؟", "How are you?", "Speaking", "Arabic"));
-            wordDao.insertWord(new Word("أنا أتعلم.", "I am learning.", "Grammar", "Arabic"));
+            wordDao.insertWord(new Word("کیا آپ مجھے سن سکتے ہیں؟", "Can you hear me?", "Listening", "Urdu"));
 
             // German
             wordDao.insertWord(new Word("Hallo", "Hello", "Vocabulary", "German"));
             wordDao.insertWord(new Word("Wie geht es dir?", "How are you?", "Speaking", "German"));
             wordDao.insertWord(new Word("Ich lerne.", "I am learning.", "Grammar", "German"));
+            wordDao.insertWord(new Word("Kannst du mich hören?", "Can you hear me?", "Listening", "German"));
 
-            // Spanish
-            wordDao.insertWord(new Word("Hola", "Hello", "Vocabulary", "Spanish"));
-            wordDao.insertWord(new Word("¿Cómo estás?", "How are you?", "Speaking", "Spanish"));
-            wordDao.insertWord(new Word("Estoy aprendiendo.", "I am learning.", "Grammar", "Spanish"));
+            // Arabic
+            wordDao.insertWord(new Word("مرحباً", "Hello", "Vocabulary", "Arabic"));
+            wordDao.insertWord(new Word("كيف حالك؟", "How are you?", "Speaking", "Arabic"));
+            wordDao.insertWord(new Word("أنا أتعلم.", "I am learning.", "Grammar", "Arabic"));
+            wordDao.insertWord(new Word("هل تسمعني؟", "Can you hear me?", "Listening", "Arabic"));
         });
     }
 }
